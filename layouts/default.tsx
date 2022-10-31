@@ -78,7 +78,7 @@ export default function DefaultLayout({ children }: DefaultLayoutProps) {
               component="a"
               size="md"
               variant="default"
-              href="https://github.com/RikuOta"
+              href="https://github.com/RikuOta/mantine-demo"
               target="_blank"
             >
               <IconBrandGithub size={14} />
