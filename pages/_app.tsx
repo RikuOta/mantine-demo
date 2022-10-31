@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { MantineProvider, MantineThemeOverride} from '@mantine/core';
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../tailwind.config.js'
+import DefaultLayout from 'layouts/default'
 
 const resolvedTailwindConfig = resolveConfig(tailwindConfig)
 
@@ -27,7 +28,7 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Mantine Demo / RikuOta</title>
+        <title>Mantine Demo</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
 
@@ -36,7 +37,9 @@ export default function App(props: AppProps) {
         withNormalizeCSS
         theme={theme}
       >
-        <Component {...pageProps} />
+        <DefaultLayout>
+          <Component {...pageProps} />
+        </DefaultLayout>
       </MantineProvider>
     </>
   );
