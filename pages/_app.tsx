@@ -4,6 +4,8 @@ import Head from 'next/head';
 import { MantineProvider, MantineThemeOverride} from '@mantine/core';
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../tailwind.config.js'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import DefaultLayout from 'layouts/default'
 
 const resolvedTailwindConfig = resolveConfig(tailwindConfig)
@@ -41,6 +43,18 @@ export default function App(props: AppProps) {
           <Component {...pageProps} />
         </DefaultLayout>
       </MantineProvider>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }
