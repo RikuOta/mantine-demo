@@ -1,7 +1,7 @@
 import 'styles/globals.css'
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import { MantineProvider, MantineThemeOverride} from '@mantine/core';
+import { AppProps } from 'next/app'
+import Head from 'next/head'
+import { MantineProvider, MantineThemeOverride } from '@mantine/core'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../tailwind.config.js'
 import { ToastContainer } from 'react-toastify'
@@ -25,7 +25,7 @@ const theme: MantineThemeOverride = {
 }
 
 export default function App(props: AppProps) {
-  const { Component, pageProps } = props;
+  const { Component, pageProps } = props
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function App(props: AppProps) {
       </MantineProvider>
 
       <ToastContainer
-        position="top-right"
+        position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -56,5 +56,5 @@ export default function App(props: AppProps) {
         pauseOnHover
       />
     </>
-  );
+  )
 }
